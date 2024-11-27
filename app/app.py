@@ -2,15 +2,10 @@
 
 from flask import Flask, render_template, request, redirect, jsonify
 from markupsafe import Markup
-from flask_cors import CORS
 import numpy as np
-import openai
 import pandas as pd
 from utils.disease import disease_dic
 from utils.fertilizer import fertilizer_dic
-import requests
-import config
-import pickle
 import io
 import torch
 from torchvision import transforms
@@ -249,4 +244,4 @@ def disease_prediction():
 
 # ===============================================================================================
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
